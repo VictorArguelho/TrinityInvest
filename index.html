@@ -5,18 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trinity Invest</title>
 
-    <link rel="stylesheet" href="/css/layout.css">
-    <link rel="stylesheet" href="/css/typography.css">
+    <link rel="stylesheet" href="/css/layout.css" />
+    <link rel="stylesheet" href="/css/typography.css" />
+
+    <link rel="stylesheet" href="/css/calculator.css" />
   </head>
   <body>
     <div class="calculator">
       <form class="form">
         <div class="field">
           <label class="text" for="start-amount"> Montante inicial: </label>
-          <div class="input-group">
+          <div class="input-group input-span">
             <span class="text">R$</span>
             <input
-              class="input"
+              class="input text"
               id="start-amount"
               type="number"
               name="start-amount"
@@ -29,10 +31,10 @@
 
         <div class="field">
           <label class="text" for="contribution"> Aporte mensal: </label>
-          <div class="input-group">
+          <div class="input-group input-span">
             <span class="text">R$</span>
             <input
-              class="input"
+              class="input text"
               id="contribution"
               type="number"
               name="contribution"
@@ -44,10 +46,10 @@
         </div>
 
         <div class="field">
-          <label class="text" for="rate"> Taxa de juros (anual): </label>
-          <div class="input-group">
+          <label class="text" for="rate"> Taxa de juros (%): </label>
+          <div class="input-group input-selector">
             <input
-              class="input"
+              class="input text"
               id="rate"
               type="number"
               name="rate"
@@ -55,9 +57,8 @@
               step="0.01"
               placeholder="Ex: 13"
             />
-            <span class="text">%</span>
             <select
-              class="selector"
+              class="selector text"
               id="rate-period-type"
               name="rate-period-type"
             >
@@ -69,9 +70,9 @@
 
         <div class="field">
           <label class="text" for="period"> Periodo: </label>
-          <div class="input-group">
+          <div class="input-group input-selector">
             <input
-              class="input"
+              class="input text"
               id="period"
               type="number"
               name="period"
@@ -79,7 +80,7 @@
               step="1"
               placeholder="Ex: 20"
             />
-            <select class="selector" id="period-type" name="period-type">
+            <select class="selector text" id="period-type" name="period-type">
               <option value="monthly">Mensal</option>
               <option value="annual">Anual</option>
             </select>
