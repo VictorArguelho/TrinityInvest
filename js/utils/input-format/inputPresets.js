@@ -1,3 +1,4 @@
+import { getDigits } from '/js/utils/format.js';
 import {
   setupFormattedInput,
   symbolPositionId,
@@ -13,4 +14,10 @@ export function setupPercentInput(input) {
 
 export function setupDecimalInput(input) {
   setupFormattedInput(input, '', symbolPositionId.prefix);
+}
+
+export function setupIntegerInput(input) {
+  input.addEventListener('input', (event) => {
+    event.target.value = getDigits(event.target.value);
+  });
 }
