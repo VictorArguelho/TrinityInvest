@@ -1,4 +1,7 @@
 .calculator {
+  width: 90%;
+  max-width: 500px;
+
   background-color: var(--gray-15);
   border: 1px solid var(--gray-30);
   border-radius: 3px;
@@ -7,7 +10,7 @@
 }
 
 .calculator .text {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 .calculator .form {
@@ -30,6 +33,7 @@
 
   display: flex;
   flex-direction: row;
+  min-width: 0;
 }
 
 .calculator .input-span {
@@ -40,14 +44,19 @@
 .calculator .selector {
   background-color: var(--gray-25);
   border: 1px solid var(--gray-10);
+
+  font-size: 1.2rem;
 }
 
 .calculator .input {
+  min-width: 0;
+  flex: 1;
+
   background-color: var(--gray-25);
   border: 1px solid var(--gray-10);
   border-radius: 3px;
 
-  flex: 1;
+  padding-left: 0.5rem;
 }
 
 .calculator .input::-webkit-inner-spin-button {
