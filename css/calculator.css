@@ -6,6 +6,11 @@
   border: 1px solid var(--gray-30);
   border-radius: 3px;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 2rem;
   padding: 1rem;
 }
 
@@ -48,14 +53,25 @@
   font-size: 1.2rem;
 }
 
-.calculator .input {
-  min-width: 0;
-  flex: 1;
+.calculator .button {
+  width: 50%;
+}
 
+.calculator .button .text {
+  font-size: 1.55rem;
+  color: var(--gray-70);
+}
+
+.calculator .input,
+.calculator .button {
   background-color: var(--gray-25);
   border: 1px solid var(--gray-10);
   border-radius: 3px;
+}
 
+.calculator .input {
+  min-width: 0;
+  flex: 1;
   padding-left: 0.5rem;
 }
 
