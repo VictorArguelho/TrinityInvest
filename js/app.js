@@ -1,3 +1,5 @@
+import { formatDecimalBR, getDigits } from '/js/utils/format.js';
+
 const elements = Object.freeze({
   startAmount: document.getElementById('start-amount'),
   contribution: document.getElementById('contribution'),
@@ -62,17 +64,4 @@ function handleSuffixDeleteFix(event, suffixLength) {
       target.value = target.value.slice(0, valueLimit);
     }
   }
-}
-
-function formatDecimalBR(digits) {
-  const amount = Number(digits) / 100;
-
-  return amount.toLocaleString('pt-BR', {
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  });
-}
-
-function getDigits(text) {
-  return text.replace(/\D/g, '');
 }
