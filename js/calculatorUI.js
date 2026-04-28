@@ -4,7 +4,7 @@ import {
   setupIntegerInput,
 } from '/js/utils/inputPresets.js';
 
-export const elements = {
+const elements = {
   startAmount: null,
   contribution: null,
   rate: null,
