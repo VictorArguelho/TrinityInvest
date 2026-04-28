@@ -1,3 +1,3 @@
-import { start } from "/js/calculatorUI.js";
+import { start } from '/js/calculatorUI.js';
 
 start();

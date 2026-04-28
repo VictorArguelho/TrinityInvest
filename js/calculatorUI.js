@@ -2,9 +2,9 @@ import {
   setupCurrencyInput,
   setupPercentInput,
   setupIntegerInput,
-} from '/js/utils/input-format/inputPresets.js';
+} from '/js/utils/inputPresets.js';
 
-const elements = {
+export const elements = {
   startAmount: null,
   contribution: null,
   rate: null,
