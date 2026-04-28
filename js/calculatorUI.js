@@ -9,6 +9,8 @@ const elements = {
   contribution: null,
   rate: null,
   period: null,
+
+  calcButton: null,
 };
 
 export function start() {
@@ -25,4 +27,6 @@ function initializeElements() {
   elements.contribution = document.getElementById('contribution');
   elements.rate = document.getElementById('rate');
   elements.period = document.getElementById('period');
+
+  elements.calcButton = document.querySelector('.calculator .button');
 }
