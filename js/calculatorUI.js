@@ -22,6 +22,8 @@ export function start() {
   setupIntegerInput(elements.period);
 }
 
+
+
 function initializeElements() {
   elements.startAmount = document.getElementById('start-amount');
   elements.contribution = document.getElementById('contribution');

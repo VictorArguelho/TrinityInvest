@@ -1,4 +1,4 @@
-import { formatBRL, formatNumber, formatPercent } from './format.js';
+import { formatBRL, formatNumber, formatPercent, getNumber } from '/js/utils/format.js';
 
 export function setupCurrencyInput(input) {
   setupCallbackInput(input, formatBRL);
@@ -11,6 +11,9 @@ export function setupPercentInput(input) {
 export function setupIntegerInput(input) {
   setupCallbackInput(input, (a) => {
     return a;
+  });
+  input.addEventListener('input', () => {
+    if (getNumber(input.value) === 0) input.value = '';
   });
 }
 
