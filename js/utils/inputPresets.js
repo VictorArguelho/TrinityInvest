@@ -1,4 +1,4 @@
-import { formatBRL, formatNumber, formatPercent, getNumber } from '/js/utils/format.js';
+import { formatBRL, formatNumber, formatPercent, getNumber } from '@utils/format.js';
 
 export function setupCurrencyInput(input) {
   setupCallbackInput(input, formatBRL);

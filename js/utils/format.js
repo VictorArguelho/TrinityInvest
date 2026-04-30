@@ -33,6 +33,7 @@ export function formatNumberBR(number, decimalLenght) {
 }
 
 export function formatNumber(text) {
+  if (typeof text === 'number') return text;
   if (typeof text !== 'string') return '';
   return text.replace(/\D/g, '');
 }
