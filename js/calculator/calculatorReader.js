@@ -1,45 +1,35 @@
-import { getNumber } from '@utils/format.js';
+import { getDecimal } from '@utils/format.js';
 import { yearToMonth } from '@utils/mat/ratePeriodConverter.js';
 
 import { elements } from '@calculator/calculatorElements.js';
 
 export function getFormValues() {
-  const startAmount = elements.startAmount.value;
-  const contribution = elements.contribution.value;
+  const startAmount = elements.startAmount.readValue();
+  const contribution = elements.contribution.readValue();
+  let rate = elements.rate.readValue().div(10000);
+  let period = elements.period.readValue();
 
-  let rate;
   const ratePeriodType = elements.ratePeriodType.value;
-  if (ratePeriodType === 'annual') {
-    rate = yearToMonth(getNumber(elements.rate.value) / 10000);
-  } else {
-    rate = elements.rate.value;
-  }
+  if (ratePeriodType === 'annual') rate = yearToMonth(rate);
 
-  let period;
   const periodType = elements.periodType.value;
-  if (periodType === 'annual') {
-    period = elements.period.value * 12;
-  } else {
-    period = elements.period.value;
-  }
+  if (periodType === 'annual') period = period.times(12);
 
-  const porra = {
-    startAmount: getNumber(startAmount),
-    contribution: getNumber(contribution),
+  const formValues = {
+    startAmount: startAmount,
+    contribution: contribution,
     rate: rate,
-    period: getNumber(period),
+    period: period,
   };
 
-  console.log(porra);
-
-  return porra;
+  return formValues;
 }
 
 export function isFormFilled() {
-  const startAmount = elements.startAmount.value;
-  const contribution = elements.contribution.value;
-  const rate = elements.rate.value;
-  const period = elements.period.value;
-
-  return startAmount != '' && contribution != '' && rate != '' && period != '';
+  return (
+    elements.startAmount.isFilled() &&
+    elements.contribution.isFilled() &&
+    elements.rate.isFilled() &&
+    elements.period.isFilled()
+  );
 }

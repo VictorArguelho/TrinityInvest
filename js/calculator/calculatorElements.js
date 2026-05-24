@@ -1,4 +1,10 @@
+import { CurrencyInput } from "../utils/inputs/currencyInput.js";
+import { PercentInput } from "../utils/inputs/percentInput.js";
+import { IntegerInput } from "../utils/inputs/integerInput.js";
+
 export const elements = {
+  calculator: null,
+
   startAmount: null,
   contribution: null,
   rate: null,
@@ -8,20 +14,18 @@ export const elements = {
   periodType: null,
 
   calcButton: null,
-
-  resultDiv: null,
 };
 
 export function initializeElements() {
-  elements.startAmount = document.getElementById('start-amount');
-  elements.contribution = document.getElementById('contribution');
-  elements.rate = document.getElementById('rate');
-  elements.period = document.getElementById('period');
+  elements.calculator = document.querySelector('.calculator');
+
+  elements.startAmount = new CurrencyInput(document.getElementById('start-amount'));
+  elements.contribution = new CurrencyInput(document.getElementById('contribution'));
+  elements.rate =  new PercentInput(document.getElementById('rate'));
+  elements.period = new IntegerInput(document.getElementById('period'));
 
   elements.ratePeriodType = document.getElementById('rate-period-type');
   elements.periodType = document.getElementById('period-type');
 
-  elements.calcButton = document.querySelector('.calculator .button');
-
-  elements.resultDiv = document.querySelector('.calculator-result');
+  elements.calcButton = document.querySelector('.calculator-form .button');
 }

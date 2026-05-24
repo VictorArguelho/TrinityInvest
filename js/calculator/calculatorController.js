@@ -1,7 +1,11 @@
-import { initializeElements } from '@calculator/calculatorElements.js';
-import { setup } from '@calculator/calculatorSetup.js';
+import {
+  initializeElements,
+  elements,
+} from '@calculator/calculatorElements.js';
+
+import { calc } from './calculatorLogic.js';
 
 export function start() {
   initializeElements();
-  setup();
+  elements.calcButton.addEventListener('click', calc);
 }
