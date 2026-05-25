@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trinity Invest</title>
+
+
+
+    <script type="module" crossorigin src="/assets/index-Cv3nGvZh.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CsVBAajM.css">
+  </head>
+  <body>
+    <div class="calculator">
+      <div class="calculator-form">
+        <form class="form" autocomplete="off">
+          <div class="field">
+            <label class="text" for="start-amount"> Montante inicial: </label>
+            <div class="input-group input-span">
+              <span class="text">R$</span>
+              <input
+                class="input text"
+                id="start-amount"
+                type="text"
+                name="start-amount"
+                placeholder="0,00"
+              />
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="text" for="contribution"> Aporte mensal: </label>
+            <div class="input-group input-span">
+              <span class="text">R$</span>
+              <input
+                class="input text"
+                id="contribution"
+                type="text"
+                name="contribution"
+                placeholder="0,00"
+              />
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="text" for="rate"> Taxa de juros (%): </label>
+            <div class="input-group input-selector">
+              <input
+                class="input text"
+                id="rate"
+                type="text"
+                name="rate"
+                placeholder="0"
+              />
+              <select
+                class="selector text"
+                id="rate-period-type"
+                name="rate-period-type"
+              >
+                <option value="monthly">Mensal</option>
+                <option value="annual">Anual</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="text" for="period"> Periodo: </label>
+            <div class="input-group input-selector">
+              <input
+                class="input text"
+                id="period"
+                type="text"
+                name="period"
+                placeholder="0"
+              />
+              <select class="selector text" id="period-type" name="period-type">
+                <option value="monthly">Mês(es)</option>
+                <option value="annual">Ano(s)</option>
+              </select>
+            </div>
+          </div>
+        </form>
+        <button class="button" type="button">
+          <span class="text">Calcular</span>
+        </button>
+      </div>
+    </div>
+
+  </body>
+</html>

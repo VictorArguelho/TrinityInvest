@@ -1,4 +1,4 @@
-import { Decimal } from '@decimal/decimal.mjs';
+import Decimal from 'decimal.js';
 import { formatNumber } from '../format.js';
 
 export function toDecimal(number) {
