@@ -1,5 +1,4 @@
-import { Decimal } from '@decimal/decimal.mjs';
-import { formatNumber } from '../format.js';
+import Decimal from "decimal.js";
 
 export function toDecimal(number) {
   if (number === '') {
